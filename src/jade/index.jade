@@ -1,0 +1,98 @@
+doctype html
+
+html.no-js
+
+  include includes/head
+
+  body
+    .svg-placeholder(style="height: 0; width: 0; position: absolute; visibility: hidden")
+    script(type='text/javascript').
+
+    include includes/header
+
+    main.content
+      .container-fluid.current-movie
+        .row.current-movie__background.w-100
+          .current-movie__overlay.position-absolute.w-100.h-100
+          .current-movie__overlay-2.position-absolute.w-100
+        .row.current-movie__breadcrumb
+          .container-fluid.current-movie__breadcrumb-overlay.position-absolute
+          .container
+            .nav(aria-label="breadcrumb")
+              ol.breadcrumb.mb-4.mt-4
+                li.breadcrumb-item Movies
+                li.breadcrumb-item.active Star Wars: The Last Jedi
+        .container.current-movie__info
+          .row
+            .col-lg-5
+              .row.current-movie__definition.mb-2
+                span.current-movie__definition-label HD
+              .row.current-movie__attributes.mb-2
+                ul.current-movie__attributes-list.p-0.m-0
+                  li.current-movie__attributes-item PG-13
+                  li.current-movie__attributes-item 143 min
+                  li.current-movie__attributes-item Action
+              .row.current-movie__name.mb-4
+                h2.current-movie__name-header Star Wars: The Last Jedi
+                span.current-movie__name-underline.mt-3
+              .row.current-movie__description.mb-2
+                p.current-movie__description-text
+                  | Luke Skywalker's peaceful and solitary existence gets upended when he encounters Rey, a young woman who shows strong signs of the Force. Her desire to learn the ways of the Jedi forces Luke to make a decision that changes their lives forever. Meanwhile, Kylo Ren and General Hux lead the First Order
+              .row.current-movie__actions.mb-2
+                button(type="button").btn.btn-play-movie &#9658 Play Movie
+                button(type="button").btn.btn-watch-trailer Trailer
+              .row.current-movie__social-media-list.mt-4
+                .container
+                  .row.current-movie__social-media-item.align-items-center
+                    a(href="")
+                      .fa.fa-facebook-f.current-movie__social-media-button
+                      span.current-movie__social-media-text.ml-3 Star Wars on Facebook
+                  .row.current-movie__social-media-item.align-items-center
+                    a(href="")
+                      .fa.fa-twitter.current-movie__social-media-button
+                      span.current-movie__social-media-text.ml-3 Follow @StarWars
+          .row.mt-5
+            .col-lg-12.current-movie__statistics
+              .row.current-movie__statistics-row-1
+                .col-lg-2.current-movie__cast.pl-0
+                  .container.w-100.h-100
+                    h3.current-movie__cast-header Cast & crew
+                    .current-movie__cast-header-underline
+                    p.current-movie__cast-description
+                      | Daisy Ridley, Mark Hamill, Carrie Fisher
+                .col-lg-4.current-movie__cast-photos
+                  .container.w-100.h-100
+                .col-lg-2.current-movie__views
+                  .container.w-100.h-100
+                    .fa.fa-eye.mt-3
+                    .current-movie__views-count 4,123
+                    .current-movie__views-label views
+                .col-lg-2.current-movie__likes
+                  .container.w-100.h-100
+                    .far.fa-heart.mt-3
+                    .current-movie__likes-count 3,450
+                    .current-movie__likes-label likes
+                .col-lg-2.current-movie__comments
+                  .container.w-100.h-100
+                    .far.fa-comments.mt-3
+                    .current-movie__comments-count 846
+                    .current-movie__comments-label comments
+              .row.mt-5.current-movie__statistics-row-2
+                .col-lg-6
+                  .row
+                    .col-lg-4.current-movie__wins.pl-0
+                      .container
+                        .current-movie__wins-count 3
+                        .current-movie__wins-label Wins
+                    .col-lg-4.current-movie__nominations
+                      .container
+                        .current-movie__nominations-count 9
+                        .current-movie__nominations-label Nominations
+                    .col-lg-4.current-movie__synopsis
+                      .container
+                        .current-movie__synopsis-header Synopsis
+                        .current-movie__synopsis-underline
+                .col-lg-6
+                  .row
+                    .container
+    include includes/footer
