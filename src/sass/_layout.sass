@@ -46,7 +46,7 @@ body
 
 
 .current-movie__overlay
-  background: linear-gradient(to right, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 80%)
+  background: linear-gradient(to right, rgba(0,0,0,0.8) 20%,rgba(0,0,0,0) 80%)
   z-index: 101
 
 .current-movie__overlay-2
@@ -147,9 +147,9 @@ body
       font-family: $headerFont
       line-height: .8em
     .current-movie__cast-header-underline
-      border-bottom: 2px solid white
+      border-bottom: 4px solid white
       width: 3em
-      margin: 20px 0
+      margin: 1.2em 0
     .current-movie__cast-description
       font-family: $textFont
       font-size: 1em
@@ -190,7 +190,15 @@ body
   font-family: $headerFont
 
 .current-movie__statistics-row-2
-  height: 100px
+  height: 150px
+  margin-top: 2rem
+  .row,
+  .current-movie__wins,
+  .current-movie__nominations,
+  .current-movie__synopsis
+    height: 100%
+    .container
+      height: 100%
 
 .current-movie__wins
   .container
@@ -209,6 +217,19 @@ body
     background: $color-grape
     color: white
     text-align: center
+  &-header
+    padding-top: 0.5em
+    font-size: 1.8em
+    text-transform: uppercase
+    font-family: $headerFont
+  &-underline
+    border-bottom: 4px solid white
+    width: 3em
+    margin: 1.2em 0
+  &-description
+    color: $color-bright-grey
+    background: $color-dark-brown
+    padding: 20px
 
 .current-movie__wins-count,
 .current-movie__nominations-count
@@ -220,3 +241,6 @@ body
   font-size: 1.2em
   text-transform: uppercase
   font-family: $headerFont
+
+.current-movie__statistics-row-3
+  
