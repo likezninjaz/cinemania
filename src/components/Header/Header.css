@@ -1,0 +1,22 @@
+.header {
+  height: 150px;
+  background: #232323;
+  z-index: 105;
+  box-shadow: 0px 5px 7px 0px black; }
+  .header .header-1 {
+    border-bottom: 1px solid #858a8e; }
+  .header h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    line-height: 0.8em;
+    font-family: "Patua One", cursive; }
+  .header .navigation {
+    text-transform: uppercase; }
+    .header .navigation a {
+      color: white; }
+      .header .navigation a .active {
+        color: #42b2da; }
+
+.navbar-nav {
+  flex-direction: row; }

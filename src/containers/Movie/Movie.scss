@@ -1,0 +1,266 @@
+@import "../../styles/variables.scss";
+
+.current-movie {
+  height: auto;
+}
+.current-movie__background {
+  z-index: 100;
+  height: 980px;
+  position: absolute;
+  background: url("../img/item-back.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.current-movie__overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.8) 20%,rgba(0,0,0,0) 80%);
+  z-index: 101;
+}
+
+.current-movie__overlay-2 {
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 80%);
+  z-index: 102;
+  height: calc(100% + 2px) !important;
+}
+
+.current-movie__breadcrumb {
+  * {
+    z-index: 102;
+  }
+  .breadcrumb {
+    background: none;
+    padding: 0;
+  }
+}
+
+.breadcrumb-item {
+  color: $color-grey;
+  & .active {
+    color: $color-bright-grey;
+  }
+}
+
+.current-movie__breadcrumb-overlay {
+  height: 70px;
+  background: black;
+  opacity: .4;
+  margin-top: -1px;
+}
+
+.current-movie__info {
+  margin-top: 4em;
+  * {
+    z-index: 102;
+  }
+}
+
+
+.current-movie__definition-label {
+  border: 2px solid white;
+  border-radius: 2px;
+  padding: 2px 4px;
+  color: white;
+}
+
+.current-movie__attributes-list {
+  color: $color-orange;
+  .current-movie__attributes-item {
+    display: inline;
+    &::before {
+      content: '\00a0\2022\00a0\00a0'
+    }
+    &:first-child::before {
+      content: '';
+    }
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+}
+
+.current-movie__name-header {
+  color: white;
+  font-size: 5em;
+  line-height: .85em;
+  font-family: $headerFont;
+}
+
+.current-movie__name-underline {
+  border-bottom: 5px solid white;
+  width: 3em;
+}
+
+.current-movie__description-text {
+  color: $color-bright-grey;
+  font-family: $textFont;
+  font-size: 1.2em;
+}
+
+.current-movie__actions .btn:first-child {
+  margin-right: 10px;
+}
+
+.btn-play-movie {
+  background: linear-gradient(to top, #143b4b 0%,#237799 100%) !important;
+  border: none !important;
+}
+
+.btn-watch-trailer {
+  background: linear-gradient(to top, #5a5b5c 0%,#8c8d8f 100%) !important;
+  border: none !important;
+}
+
+.current-movie__social-media-item {
+  margin: 10px 0;
+}
+
+.current-movie__social-media-text {
+  color: white;
+}
+
+.current-movie__statistics {
+  .container {
+    border-radius: 2px;
+  }
+}
+
+.current-movie__statistics-row-1 {
+  height: 300px;
+  .fa, .far {
+    font-size: 4em;
+    color: white;
+  }
+}
+
+.current-movie__cast {
+  .container {
+    background: $color-sky-blue;
+    color: white;
+    padding: 20px;
+    .current-movie__cast-header {
+      font-size: 2em;
+      font-family: $headerFont;
+      line-height: .8em;
+    }
+    .current-movie__cast-header-underline {
+      border-bottom: 4px solid white;
+      width: 3em;
+      margin: 1.2em 0;
+    }
+    .current-movie__cast-description {
+      font-family: $textFont;
+      font-size: 1em;
+    }
+  }
+}
+    
+.current-movie__cast-photos {
+  .container {
+    background: white;
+  }
+}
+
+.current-movie__views {
+  .container {
+    background: $color-salad;
+    text-align: center;
+    color: white;
+  }
+}
+
+.current-movie__likes {
+  .container {
+    background: $color-coral;
+    text-align: center;
+    color: white;
+  }
+}
+
+.current-movie__comments {
+  .container {
+    background: $color-carrot;
+    text-align: center;
+    color: white;
+  }
+}
+
+.current-movie__views-count,
+.current-movie__likes-count,
+.current-movie__comments-count {
+  font-size: 3em;
+  font-family: $headerFont;
+}
+
+.current-movie__views-label,
+.current-movie__likes-label,
+.current-movie__comments-label {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-family: $headerFont;
+}
+
+.current-movie__statistics-row-2 {
+  height: 150px;
+  margin-top: 2rem;
+  .row,
+  .current-movie__wins,
+  .current-movie__nominations,
+  .current-movie__synopsis {
+    height: 100%;
+    .container {
+      height: 100%;
+    }
+  }
+}
+
+.current-movie__wins {
+  .container {
+    background: $color-green;
+    color: white;
+    text-align: center;
+  }
+}
+
+.current-movie__nominations {
+  .container {
+    background: $color-blood;
+    color: white;
+    text-align: center;
+  }
+}
+
+.current-movie__synopsis {
+  .container {
+    background: $color-grape;
+    color: white;
+    text-align: center;
+  }
+  &-header {
+    padding-top: 0.5em;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-family: $headerFont;
+  }
+  &-underline {
+    border-bottom: 4px solid white;
+    width: 3em;
+    margin: 1.2em 0;
+  }
+  &-description {
+    color: $color-bright-grey;
+    background: $color-dark-brown;
+    padding: 20px;
+  }
+}
+
+.current-movie__wins-count,
+.current-movie__nominations-count {
+  font-size: 4em;
+  font-family: $headerFont;
+}
+
+.current-movie__wins-label,
+.current-movie__nominations-label {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: $headerFont;
+}
