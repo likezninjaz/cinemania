@@ -5,7 +5,7 @@ export default class HeaderLayout extends Component {
     render() {
         return (
             <header className='header'>
-                <Grid className='container h-100'>
+                <Grid className='h-100'>
                     <Row className='align-items-center justify-content-center header-1'>
                         <Col sm={12} md={12} lg={12}>
                             <h1 className='text-center m-4'>Cinemania</h1>
