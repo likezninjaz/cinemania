@@ -1,3 +1,37 @@
+.btn, .btn:visited {
+  padding: 11px 33px;
+  font: 14px Arial, sans-serif;
+  color: white;
+  border: none;
+  background: orange;
+  outline: none !important;
+  cursor: pointer;
+  display: inline-block;
+  position: relative; }
+  .btn:hover, .btn:focus, .btn:visited:hover, .btn:visited:focus {
+    background: #ffb733;
+    color: white; }
+  .btn:active, .btn:visited:active {
+    background: #cc8400; }
+
+.fa, .far {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 2em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10%; }
+  .fa .fa-facebook-f, .far .fa-facebook-f {
+    background: #3B5998;
+    color: white; }
+    .fa .fa-facebook-f ~ *, .far .fa-facebook-f ~ * {
+      color: #3B5998; }
+  .fa .fa-twitter, .far .fa-twitter {
+    background: #55ACEE;
+    color: white; }
+    .fa .fa-twitter ~ *, .far .fa-twitter ~ * {
+      color: #55ACEE; }
+
 .current-movie {
   height: auto;
   padding: 0;

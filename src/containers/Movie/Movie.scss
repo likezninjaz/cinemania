@@ -1,4 +1,6 @@
 @import "../../styles/variables.scss";
+@import "../../styles/buttons.scss";
+@import "../../styles/content.scss";
 
 .current-movie {
   height: auto;
@@ -58,7 +60,6 @@
 .current-movie__info {
   z-index: 101;
 }
-
 
 .current-movie__definition-label {
   border: 2px solid white;

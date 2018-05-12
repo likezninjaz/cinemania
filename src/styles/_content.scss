@@ -1,0 +1,28 @@
+.fa, .far {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 2em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10%;
+  .fa-facebook-f {
+    background: #3B5998;
+    color: white;
+    ~ * {
+      color: #3B5998
+    }
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    ~ * {
+      color: #55ACEE;
+    }
+  }
+}
+  
+
+  
+  
+
+
