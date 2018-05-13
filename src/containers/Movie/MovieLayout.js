@@ -48,12 +48,58 @@ const MovieLayout = ({movieData}) => {
                                         <Grid>
                                             <Row className='current-movie__social-media-item align-items-center'>
                                                 <a href=''>
-                                                    <div className='fa fa-facebook-f current-movie__social-media-button'>
-                                                        <span className='current-movie__social-media-text ml-3'>Star Wars on Facebook</span>
-                                                    </div>
+                                                    <div className='fa fa-facebook-f current-movie__social-media-button' />
+                                                    <span className='current-movie__social-media-text ml-3'>Star Wars on Facebook</span>
+                                                </a>
+                                            </Row>
+                                            <Row>
+                                                <a href=''>
+                                                    <div className='fa fa-twitter current-movie__social-media-button' />
+                                                    <span className='current-movie__social-media-text ml-3'>Follow @StarWars</span>
                                                 </a>
                                             </Row>
                                         </Grid>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row className='mt-5'>
+                                <Col sm={12} md={12} lg={12} className='current-movie__statistics'>
+                                    <Row className='current-movie__statistics-row-1'>
+                                        <Col sm={2} md={2} lg={2} className='current-movie__cast pl-0'>
+                                            <Grid className='w-100 h-100'>
+                                                <h3 className='current-movie__cast-header'>Cast & crew</h3>
+                                                <div className='current-movie__cast-header-underline' />
+                                                <p className=''>
+                                                    {movieData.cast.map((item, index) => (
+                                                        <span key={index}>
+                                                            {index === 0 ? movieData.cast[index] : ', ' + movieData.cast[index]}
+                                                        </span>
+                                                    ))}
+                                                </p>
+                                            </Grid>
+                                        </Col>
+                                        <Col sm={4} md={4} lg={4} className='current-movie__cast-photos'>
+                                            <Grid className='w-100 h-100'>
+                                            </Grid>
+                                        </Col>
+                                        <Col sm={2} md={2} lg={2} className='current-movie__views'>
+                                            <Grid className='w-100 h-100'>
+                                                <div classNames='fa fa-eye mt-3' />
+                                                <div className='current-movie__views-count'>
+                                                    {movieData.views}
+                                                </div>
+                                                <div className='current-movie__views-label'>views</div>
+                                            </Grid>
+                                        </Col>
+                                        <Col sm={2} md={2} lg={2} className='current-movie__likes'>
+                                            <Grid className='w-100 h-100'>
+                                                <div classNames='fa fa-heart mt-3' />
+                                                <div className='current-movie__likes-count'>
+                                                    {movieData.likes}
+                                                </div>
+                                                <div className='current-movie__likes-label'>likes</div>
+                                            </Grid>
+                                        </Col>
                                     </Row>
                                 </Col>
                             </Row>
@@ -73,7 +119,10 @@ MovieLayout.propTypes = {
         duration: PropTypes.number,
         genere: PropTypes.string,
         name: PropTypes.string,
-        description: PropTypes.string
+        description: PropTypes.string,
+        cast: PropTypes.arrayOf(PropTypes.string),
+        views: PropTypes.number,
+        likes: PropTypes.number
     })
 };
   
@@ -85,7 +134,10 @@ MovieLayout.defaultProps = {
         duration: 143,
         genere: 'Action',
         name: 'Star Wars: The Last Jedi',
-        description: "Luke Skywalker's peaceful and solitary existence gets upended when he encounters Rey, a young woman who shows strong signs of the Force. Her desire to learn the ways of the Jedi forces Luke to make a decision that changes their lives forever. Meanwhile, Kylo Ren and General Hux lead the First Order"
+        description: "Luke Skywalker's peaceful and solitary existence gets upended when he encounters Rey, a young woman who shows strong signs of the Force. Her desire to learn the ways of the Jedi forces Luke to make a decision that changes their lives forever. Meanwhile, Kylo Ren and General Hux lead the First Order",
+        cast: ['Daisy Ridley', 'Mark Hamill', 'Carrie Fisher'],
+        views: 4123,
+        likes: 3450
     }
 };
 
