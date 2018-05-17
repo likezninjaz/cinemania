@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
 .btn, .btn:visited {
   padding: 11px 33px;
   font: 14px Arial, sans-serif;
@@ -37,26 +39,42 @@
   padding: 0;
   margin: 0;
   max-width: 100%; }
-
-.current-movie__background {
-  height: 980px;
-  margin: 0;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden; }
-  .current-movie__background::after, .current-movie__background::before {
-    content: '';
+  .current-movie__background {
+    height: 980px;
+    margin: 0;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden; }
+    .current-movie__background::after, .current-movie__background::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+    .current-movie__background::after {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 80%); }
+    .current-movie__background::before {
+      background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 80%); }
+  .current-movie__info {
+    z-index: 101;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; }
-  .current-movie__background::after {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 80%); }
-  .current-movie__background::before {
-    background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 80%); }
+    top: 150px; }
+  .current-movie__definition-label {
+    border: 2px solid white;
+    border-radius: 2px;
+    padding: 2px 4px;
+    color: white; }
+  .current-movie__name {
+    display: flex;
+    flex-direction: column; }
+    .current-movie__name-header {
+      color: white;
+      font-size: 5em;
+      line-height: .85em;
+      font-family: "Patua One", cursive; }
 
 .current-movie__breadcrumb * {
   z-index: 102; }
@@ -76,17 +94,6 @@
   opacity: .4;
   margin-top: -1px; }
 
-.current-movie__info {
-  z-index: 101;
-  position: absolute;
-  top: 150px; }
-
-.current-movie__definition-label {
-  border: 2px solid white;
-  border-radius: 2px;
-  padding: 2px 4px;
-  color: white; }
-
 .current-movie__attributes-list {
   color: #e16e42; }
   .current-movie__attributes-list .current-movie__attributes-item {
@@ -97,12 +104,6 @@
       content: ''; }
     .current-movie__attributes-list .current-movie__attributes-item:not(:first-child) {
       margin-left: 5px; }
-
-.current-movie__name-header {
-  color: white;
-  font-size: 5em;
-  line-height: .85em;
-  font-family: "Patua One", cursive; }
 
 .current-movie__name-underline {
   border-bottom: 5px solid white;
@@ -130,8 +131,10 @@
 .current-movie__social-media-text {
   color: white; }
 
-.current-movie__statistics .container {
-  border-radius: 2px; }
+.current-movie__statistics {
+  padding-left: 30px; }
+  .current-movie__statistics .container {
+    border-radius: 2px; }
 
 .current-movie__statistics-row-1 {
   height: 300px; }
