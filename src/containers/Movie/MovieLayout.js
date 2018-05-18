@@ -120,8 +120,33 @@ const MovieLayout = ({movieData}) => {
                                                     <div className='current-movie__wins-label'>Wins</div>
                                                 </Grid>
                                             </Col>
+                                            <Col sm={4} md={4} lg={4} className='current-movie__nominations pl-0'>
+                                                <Grid>
+                                                    <div className='current-movie__nominations-count'>{movieData.nominations}</div>
+                                                    <div className='current-movie__nominations-label'>Nominations</div>
+                                                </Grid>
+                                            </Col>
+                                            <Col sm={4} md={4} lg={4} className='current-movie__synopsis'>
+                                                <Grid>
+                                                    <div className='current-movie__synopsis-header'>Synopsis</div>
+                                                    <div className='current-movie__synopsis-underline' />
+                                                </Grid>
+                                            </Col>
                                         </Row>
                                     </Col>
+                                    <Col sm={6} md={6} lg={6}>
+                                        <Row>
+                                            <Grid>
+                                                <Col sm={12} md={12} lg={12} className='current-movie__synopsis-description'>
+                                                    <Grid>
+                                                        {movieData.synopsis}
+                                                    </Grid>
+                                                </Col>
+                                            </Grid>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                                <Row>
                                 </Row>
                             </Grid>
                         </Col>
@@ -145,7 +170,9 @@ MovieLayout.propTypes = {
         views: PropTypes.number,
         likes: PropTypes.number,
         comments: PropTypes.number,
-        wins: PropTypes.number
+        wins: PropTypes.number,
+        nominations: PropTypes.number,
+        synopsis: PropTypes.string
     })
 };
   
@@ -162,7 +189,9 @@ MovieLayout.defaultProps = {
         views: 4123,
         likes: 3450,
         comments: 846,
-        wins: 3
+        wins: 3,
+        nominations: 9,
+        synopsis: "The opening crawl from this latest film 'Star Wars, Episode VIII: The Last Jedi' reads that the First Order is plotting to seize military control of the galaxy. A team of Resistance fighters led by General Leia Organa (Carrie Fisher) are planning an evacuation from their main base as Supreme Leader Snoke's (Andy Serkis) forces are coming for them. The Resistance holds out hope that Luke Skywalker (Mark Hamill) will return to bring hope. The opening scene shows Poe Dameron (Oscar Isaac) and the droid BB-8 are flying over the First Order's dreadnought as General Hux (Domhnall Gleeson) orders his men to fire upon Poe and the Resistance's base. Other fighters head in for the attack. Poe orders a fighter, Paige (Veronica Ngo), to drop the payload onto the dreadnought. The fighters take heavy hits, and Paige is knocked away from her remote. With mere moments before the First Order obliterates the Resistance, Paige is able to grab the remote and drop all their bombs down on the dreadnought, completely destroying it at the cost of her life. The rest of the fighters go into hyperspace to escape."
     }
 };
 
