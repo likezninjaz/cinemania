@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Col, Row, Navbar, Nav, NavItem, ButtonToolbar, Button } from 'react-bootstrap';
+import { Grid, Col, Row, ButtonToolbar, Button } from 'react-bootstrap';
 
 import Header from '../../components/Header/Header';
 
@@ -71,11 +71,11 @@ const MovieLayout = ({movieData}) => {
                                             <h3 className='current-movie__cast-header'>Cast & crew</h3>
                                             <div className='current-movie__cast-header-underline' />
                                             <p className=''>
-                                                {movieData.cast.map((item, index) => (
+                                                {/* {movieData.cast.map((item, index) => (
                                                     <span key={index}>
                                                         {index === 0 ? movieData.cast[index] : ', ' + movieData.cast[index]}
                                                     </span>
-                                                ))}
+                                                ))} */}
                                             </p>
                                         </Grid>
                                     </Col>
@@ -85,7 +85,7 @@ const MovieLayout = ({movieData}) => {
                                     </Col>
                                     <Col sm={2} md={2} lg={2} className='current-movie__views'>
                                         <Grid className='w-100 h-100'>
-                                            <div classNames='fa fa-eye mt-3' />
+                                            <div className='fa fa-eye mt-3' />
                                             <div className='current-movie__views-count'>
                                                 {movieData.views}
                                             </div>
@@ -94,7 +94,7 @@ const MovieLayout = ({movieData}) => {
                                     </Col>
                                     <Col sm={2} md={2} lg={2} className='current-movie__likes'>
                                         <Grid className='w-100 h-100'>
-                                            <div classNames='fa fa-heart mt-3' />
+                                            <div className='fa fa-heart mt-3' />
                                             <div className='current-movie__likes-count'>
                                                 {movieData.likes}
                                             </div>
@@ -103,7 +103,7 @@ const MovieLayout = ({movieData}) => {
                                     </Col>
                                     <Col sm={2} md={2} lg={2} className='current-movie__comments'>
                                         <Grid className='w-100 h-100'>
-                                            <div classNames='fa fa-comments mt-3' />
+                                            <div className='fa fa-comments mt-3' />
                                             <div className='current-movie__comments-count'>
                                                 {movieData.comments}
                                             </div>

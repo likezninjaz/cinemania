@@ -16,6 +16,9 @@
   .btn:active, .btn:visited:active {
     background: #cc8400; }
 
+html {
+  background: black; }
+
 .fa, .far {
   padding: 0.5em;
   font-size: 1em;
