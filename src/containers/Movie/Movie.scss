@@ -215,7 +215,7 @@
   height: 150px;
   margin-top: 2rem;
   .row,
-  .current-movie__wins,
+  .current-movie__rathing,
   .current-movie__nominations,
   .current-movie__synopsis {
     height: 100%;
@@ -225,7 +225,7 @@
   }
 }
 
-.current-movie__wins {
+.current-movie__rathing {
   .container {
     background: $color-green;
     color: white;
@@ -265,13 +265,13 @@
   }
 }
 
-.current-movie__wins-count,
+.current-movie__rathing-count,
 .current-movie__nominations-count {
   font-size: 4em;
   font-family: $headerFont;
 }
 
-.current-movie__wins-label,
+.current-movie__rathing-label,
 .current-movie__nominations-label {
   font-size: 1.2em;
   text-transform: uppercase;

@@ -34,11 +34,11 @@ const MovieLayout = ({movieData}) => {
                                         </ul>
                                     </Row>
                                     <Row className='current-movie__name mb-4'>
-                                        <h2 className='current-movie__name-header'>{movieData.name}</h2>
+                                        <h2 className='current-movie__name-header'>{movieData.original_title}</h2>
                                         <span className='current-movie__name-underline mt-3'/>
                                     </Row>
                                     <Row className='current-movie__description mb-2'>
-                                        <p className='current-movie__description-text'>{movieData.description}</p>
+                                        <p className='current-movie__description-text'>{movieData.overview}</p>
                                     </Row>
                                     <Row className='current-movie__actions mb-2'>
                                         <ButtonToolbar>
@@ -114,10 +114,10 @@ const MovieLayout = ({movieData}) => {
                                 <Row className='current-movie__statistics-row-2'>
                                     <Col sm={6} md={6} lg={6}>
                                         <Row>
-                                            <Col sm={4} md={4} lg={4} className='current-movie__wins pl-0'>
+                                            <Col sm={4} md={4} lg={4} className='current-movie__rathing pl-0'>
                                                 <Grid>
-                                                    <div className='current-movie__wins-count'>{movieData.wins}</div>
-                                                    <div className='current-movie__wins-label'>Wins</div>
+                                                    <div className='current-movie__rathing-count'>{movieData.vote_average}</div>
+                                                    <div className='current-movie__rathing-label'>Rathing</div>
                                                 </Grid>
                                             </Col>
                                             <Col sm={4} md={4} lg={4} className='current-movie__nominations pl-0'>
@@ -164,35 +164,16 @@ MovieLayout.propTypes = {
         ageRathing: PropTypes.oneOf(['PG-13', 'PG-18', 'PG-21']),
         duration: PropTypes.number,
         genere: PropTypes.string,
-        name: PropTypes.string,
-        description: PropTypes.string,
+        original_title: PropTypes.string,
+        overview: PropTypes.string,
         cast: PropTypes.arrayOf(PropTypes.string),
         views: PropTypes.number,
         likes: PropTypes.number,
         comments: PropTypes.number,
-        wins: PropTypes.number,
+        vote_average: PropTypes.number,
         nominations: PropTypes.number,
         synopsis: PropTypes.string
     })
-};
-  
-MovieLayout.defaultProps = {
-    movieData: {
-        imageBackground: 'https://starwarsblog.starwars.com/wp-content/uploads/2017/11/last-jedi-poster-tall.jpg',
-        definition: 'HD',
-        ageRathing: 'PG-13',
-        duration: 143,
-        genere: 'Action',
-        name: 'Star Wars',
-        description: "Luke Skywalker's peaceful and solitary existence gets upended when he encounters Rey, a young woman who shows strong signs of the Force. Her desire to learn the ways of the Jedi forces Luke to make a decision that changes their lives forever. Meanwhile, Kylo Ren and General Hux lead the First Order",
-        cast: ['Daisy Ridley', 'Mark Hamill', 'Carrie Fisher'],
-        views: 4123,
-        likes: 3450,
-        comments: 846,
-        wins: 3,
-        nominations: 9,
-        synopsis: "The opening crawl from this latest film 'Star Wars, Episode VIII: The Last Jedi' reads that the First Order is plotting to seize military control of the galaxy. A team of Resistance fighters led by General Leia Organa (Carrie Fisher) are planning an evacuation from their main base as Supreme Leader Snoke's (Andy Serkis) forces are coming for them. The Resistance holds out hope that Luke Skywalker (Mark Hamill) will return to bring hope. The opening scene shows Poe Dameron (Oscar Isaac) and the droid BB-8 are flying over the First Order's dreadnought as General Hux (Domhnall Gleeson) orders his men to fire upon Poe and the Resistance's base. Other fighters head in for the attack. Poe orders a fighter, Paige (Veronica Ngo), to drop the payload onto the dreadnought. The fighters take heavy hits, and Paige is knocked away from her remote. With mere moments before the First Order obliterates the Resistance, Paige is able to grab the remote and drop all their bombs down on the dreadnought, completely destroying it at the cost of her life. The rest of the fighters go into hyperspace to escape."
-    }
 };
 
 export default MovieLayout;
