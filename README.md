@@ -11,6 +11,7 @@ Cinemania is an example of online movies application
 
 * [React](https://reactjs.org/)
 * [Sass](https://sass-lang.com/)
+* [Axios](https://github.com/axios/axios)
 
 ## License
 
